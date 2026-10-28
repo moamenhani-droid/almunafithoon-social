@@ -16,10 +16,21 @@
 ## التثبيت
 
 ```bash
-git clone <رابط-المستودع> ~/.claude/skills/almunafithoon-social
+git clone https://github.com/moamenhani-droid/almunafithoon-social.git \
+  ~/.claude/skills/almunafithoon-social
 ```
 
-ثم اطلب من Claude Code مثلاً: «صمم بوست إطلاق مشروع لمجمع الروان».
+تعمل المهارة تلقائياً في أي محادثة جديدة مع Claude Code. اطلب مثلاً:
+
+- «صمم بوست إطلاق مشروع لمجمع الروان»
+- «اكتب برومت صورة لواجهة مجمع سكني»
+- «صمم ستوري لشقق جاهزة للسكن واكتب الكابشن»
+
+للتحديث لاحقاً:
+
+```bash
+git -C ~/.claude/skills/almunafithoon-social pull
+```
 
 ## المتطلبات
 
@@ -29,7 +40,10 @@ git clone <رابط-المستودع> ~/.claude/skills/almunafithoon-social
 ## الاستخدام المباشر
 
 ```bash
-python3 scripts/render.py assets/templates/post-launch.html out/post.png --data examples/launch.json
+python3 scripts/render.py \
+  assets/templates/post-launch.html \
+  out/post.png \
+  --data examples/launch.json
 ```
 
 ## المحتويات

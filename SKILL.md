@@ -1,6 +1,6 @@
 ---
 name: almunafithoon-social
-description: This skill should be used when designing Instagram posts, carousels, stories, reel covers, or visual-identity social content for «المنفذون — استثمار عقاري» (MUNAFIZOON Real Estate Investment, Baghdad), or when writing image-generation prompts, Arabic captions, or hashtags for that brand. It provides the measured emerald/silver/ivory palette with contrast rules, typography, 13 layout templates, AI image prompt blocks, Arabic copywriting rules, and an HTML-to-PNG render pipeline at exact Instagram sizes.
+description: This skill should be used when designing Instagram posts, carousels, stories, reel covers, or visual-identity social content for «المنفذون — استثمار عقاري» (MUNAFIZOON Real Estate Investment, Baghdad), or when writing image-generation prompts, Arabic captions, or hashtags for that brand. Triggers include Arabic requests such as «صمم بوست»، «صمم ستوري»، «كاروسيل»، «غلاف ريل»، «برومت صورة»، «اكتب كابشن»، «هاشتاقات» for المنفذون العقارية. It provides the measured emerald/silver/ivory palette with contrast rules, typography, 13 layout templates, AI image prompt blocks, Arabic copywriting rules, and an HTML-to-PNG render pipeline at exact Instagram sizes.
 ---
 
 # المنفذون — تصميم السوشيال ميديا
