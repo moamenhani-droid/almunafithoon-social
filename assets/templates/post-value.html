@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- قالب ٧ — قيمة العلامة · 1080×1350 · خلفية عاجية
+     المتغيرات: {{BG}} (صورة ظل النخيل — اختيارية) {{WORD}} {{LINE}} {{INDEX}}
+     سلسلة ثلاثية: «استثمار» ثم «بناء» ثم «قيمة» -->
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+.canvas{ background:var(--ivory) center/cover no-repeat }
+.canvas.has-bg{ background-image:var(--bg) }
+.idx{ position:absolute; top:var(--pad); right:var(--pad); color:var(--emerald-mid); font-size:18px }
+.word{ position:absolute; top:330px; right:var(--pad); left:var(--pad);
+       font-size:200px; color:var(--emerald); line-height:1.25 }
+.rule{ position:absolute; top:640px; right:var(--pad); width:160px; height:2px; background:var(--silver-dk) }
+.line{ position:absolute; top:680px; right:var(--pad); width:720px;
+       font-size:38px; line-height:1.7; color:var(--ink) }
+.logo{ position:absolute; bottom:56px; left:50%; width:300px; transform:translateX(-50%);
+       mix-blend-mode:multiply }
+</style></head><body>
+<div class="canvas post" style="--bg:url('{{BG}}')" data-bg="{{BG}}">
+  <div class="idx latin">{{INDEX}}</div>
+  <div class="word kufi">{{WORD}}</div>
+  <div class="rule"></div>
+  <div class="line">{{LINE}}</div>
+  <img class="logo" src="../logo/logo-feathered-multiply.png" alt="المنفذون">
+</div>
+<script>
+  const c=document.querySelector('.canvas');
+  if(c.dataset.bg && !c.dataset.bg.includes('{{')) c.classList.add('has-bg');
+</script>
+</body></html>

@@ -1,0 +1,48 @@
+/* ═══ المنفذون — استثمار عقاري · أساس القوالب ═══
+   المسارات نسبية إلى assets/templates/ — لا تنقل الملف خارج المجلد. */
+
+@font-face{ font-family:"Kufi"; src:url("../fonts/NotoKufiArabic-Bold.ttf"); font-weight:700 }
+@font-face{ font-family:"Kufi"; src:url("../fonts/NotoKufiArabic-Regular.ttf"); font-weight:400 }
+@font-face{ font-family:"Plex"; src:url("../fonts/IBMPlexSansArabic-Regular.ttf"); font-weight:400 }
+@font-face{ font-family:"Plex"; src:url("../fonts/IBMPlexSansArabic-SemiBold.ttf"); font-weight:600 }
+@font-face{ font-family:"Plex"; src:url("../fonts/IBMPlexSansArabic-Bold.ttf"); font-weight:700 }
+@font-face{ font-family:"Mont"; src:url("../fonts/Montserrat-Regular.ttf"); font-weight:400 }
+@font-face{ font-family:"Mont"; src:url("../fonts/Montserrat-SemiBold.ttf"); font-weight:600 }
+
+:root{
+  --emerald:#16352E; --emerald-mid:#2F4F48; --sage:#4A615E;
+  --silver:#C8CBC9; --silver-dk:#8A8F8C;
+  --ivory:#F1EDE7; --ivory-lt:#F8F6F2; --ink:#0F1F1B;
+  --pad:80px;
+}
+*{ margin:0; padding:0; box-sizing:border-box }
+html,body{ -webkit-font-smoothing:antialiased }
+body{ font-family:"Plex",sans-serif; color:var(--ink); direction:rtl; overflow:hidden }
+
+.canvas{ position:relative; overflow:hidden }
+.post   { width:1080px; height:1350px }
+.square { width:1080px; height:1080px }
+.story  { width:1080px; height:1920px }
+
+/* عناوين وتسميات */
+.kufi{ font-family:"Kufi",sans-serif; font-weight:700; line-height:1.45 }
+.latin{ font-family:"Mont",sans-serif; direction:ltr; text-transform:uppercase;
+        letter-spacing:.28em; font-weight:600 }
+/* تسمية بخطين جانبيين — مقتبسة من «— MUNAFIZOON —» في الشعار */
+.ruled{ display:inline-flex; align-items:center; gap:22px }
+.ruled::before,.ruled::after{ content:""; width:56px; height:2px; background:currentColor; opacity:.8 }
+
+/* إطار بزاوية مشطوفة 45° — توقيع الهوية من ألواح المونوغرام */
+.chamfer-tl{ clip-path:polygon(90px 0,100% 0,100% 100%,0 100%,0 90px) }
+.chamfer-tr{ clip-path:polygon(0 0,calc(100% - 90px) 0,100% 90px,100% 100%,0 100%) }
+
+/* الشعار النصي المركّب — بديل مؤقت على الخلفيات الزمردية */
+.wordmark{ display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--ivory) }
+.wordmark .ar{ font-family:"Kufi",sans-serif; font-weight:700; font-size:54px; line-height:1.3 }
+.wordmark .en{ font-family:"Mont",sans-serif; font-weight:600; font-size:20px;
+               letter-spacing:.42em; color:var(--silver); direction:ltr }
+.wordmark .en::before,.wordmark .en::after{ content:"—"; margin:0 14px; letter-spacing:0 }
+.wordmark .sub{ font-family:"Mont",sans-serif; font-size:13px; letter-spacing:.32em;
+                color:var(--silver); direction:ltr; opacity:.85 }
+
+.ltr{ direction:ltr; unicode-bidi:isolate }

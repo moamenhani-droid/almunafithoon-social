@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- قالب ١ — إطلاق مشروع · 1080×1350
+     المتغيرات: {{IMAGE}} {{KICKER}} {{TITLE}} {{LOCATION}}
+                {{N1}} {{L1}} {{N2}} {{L2}} {{N3}} {{L3}}
+     إن كان {{IMAGE}} فارغاً يظهر لوح زمردي متدرّج مكان الصورة. -->
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+.canvas{ background:var(--emerald); color:var(--ivory) }
+.photo{ position:absolute; top:var(--pad); right:var(--pad); left:var(--pad); height:690px;
+        background:linear-gradient(160deg,var(--sage),var(--emerald-mid) 55%,#1d3f37);
+        background-size:cover; background-position:center }
+.photo.has-img{ background-image:var(--img) }
+.photo::after{ content:""; position:absolute; inset:0;
+               background:linear-gradient(180deg,transparent 55%,rgba(22,53,46,.55)) }
+.body{ position:absolute; top:810px; right:var(--pad); left:var(--pad) }
+.kick{ color:var(--silver); font-size:19px }
+.title{ font-size:84px; margin-top:22px }
+.loc{ color:var(--silver); font-size:30px; margin-top:6px }
+.stats{ position:absolute; bottom:170px; right:var(--pad); left:var(--pad);
+        display:grid; grid-template-columns:repeat(3,1fr);
+        border-top:1px solid rgba(200,203,201,.35); padding-top:26px }
+.stats > div{ padding-right:26px }
+.stats > div + div{ border-right:1px solid rgba(200,203,201,.35) }
+.stats .n{ font-size:46px; font-weight:700; line-height:1.1 }
+.stats .l{ font-size:22px; color:var(--silver); margin-top:6px }
+.mark{ position:absolute; bottom:52px; left:0; right:0 }
+.mark .ar{ font-size:34px } .mark .en{ font-size:14px } .mark .sub{ display:none }
+</style></head><body>
+<div class="canvas post">
+  <div class="photo chamfer-tl" style="--img:url('{{IMAGE}}')" data-img="{{IMAGE}}"></div>
+  <div class="body">
+    <div class="kick latin ruled">{{KICKER}}</div>
+    <div class="title kufi">{{TITLE}}</div>
+    <div class="loc">{{LOCATION}}</div>
+  </div>
+  <div class="stats">
+    <div><div class="n">{{N1}}</div><div class="l">{{L1}}</div></div>
+    <div><div class="n">{{N2}}</div><div class="l">{{L2}}</div></div>
+    <div><div class="n">{{N3}}</div><div class="l">{{L3}}</div></div>
+  </div>
+  <div class="mark wordmark"><span class="ar">المنفذون</span><span class="en">MUNAFIZOON</span><span class="sub">REAL ESTATE INVESTMENT</span></div>
+</div>
+<script>
+  const p=document.querySelector('.photo');
+  if(p.dataset.img && !p.dataset.img.includes('{{')) p.classList.add('has-img');
+</script>
+</body></html>

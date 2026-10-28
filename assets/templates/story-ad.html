@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- قالب ١١ — إعلان ستوري · 1080×1920
+     المتغيرات: {{IMAGE}} {{KICKER}} {{TITLE}} {{DETAIL}} {{CTA}}
+     المنطقة الآمنة: y من 250 إلى 1580. الفراغ بين 1150 و1500 محجوز لملصق الرابط. -->
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+.canvas{ background:linear-gradient(175deg,var(--sage) 0%,var(--emerald-mid) 40%,var(--emerald) 75%);
+         background-size:cover; background-position:center; color:var(--ivory) }
+.canvas.has-img{ background-image:var(--img) }
+.canvas::after{ content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(22,53,46,.15) 0%,rgba(22,53,46,.25) 35%,
+             rgba(22,53,46,.88) 62%,var(--emerald) 100%) }
+.top{ position:absolute; top:290px; right:64px; z-index:2 }
+.top .ar{ font-size:30px } .top .en{ font-size:12px } .top .sub{ display:none }
+.top.wordmark{ align-items:flex-start }
+.content{ position:absolute; top:640px; right:64px; left:64px; z-index:2 }
+.kick{ color:var(--silver); font-size:20px }
+.title{ font-size:96px; margin-top:26px }
+.detail{ font-size:34px; color:var(--silver); margin-top:18px; line-height:1.7 }
+.slot{ position:absolute; top:1190px; left:50%; width:700px; height:260px; transform:translateX(-50%);
+       border:2px dashed rgba(200,203,201,.0); z-index:2 }  /* اجعل الحد مرئياً (.45) للمعاينة فقط */
+.cta{ position:absolute; top:1490px; right:64px; left:64px; z-index:2; text-align:center;
+      font-size:30px; color:var(--ivory) }
+.cta b{ color:var(--silver); font-weight:600 }
+</style></head><body>
+<div class="canvas story" style="--img:url('{{IMAGE}}')" data-img="{{IMAGE}}">
+  <div class="top wordmark"><span class="ar">المنفذون</span><span class="en">MUNAFIZOON</span><span class="sub"></span></div>
+  <div class="content">
+    <div class="kick latin ruled">{{KICKER}}</div>
+    <div class="title kufi">{{TITLE}}</div>
+    <div class="detail">{{DETAIL}}</div>
+  </div>
+  <div class="slot"></div>
+  <div class="cta">{{CTA}}</div>
+</div>
+<script>
+  const c=document.querySelector('.canvas');
+  if(c.dataset.img && !c.dataset.img.includes('{{')) c.classList.add('has-img');
+</script>
+</body></html>
